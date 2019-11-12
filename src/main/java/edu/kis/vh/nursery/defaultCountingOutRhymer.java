@@ -10,25 +10,24 @@ public class defaultCountingOutRhymer {
 		if (!isFull())
 			NUMBERS[++total] = in;
 	}
-
-		public boolean callCheck() {
+	// Błędy formatowania i konwencji - 1
+	public boolean callCheck() {
 			return total == -1;
-		}
-		
-			public boolean isFull() {
-				return total == 11;
-			}
-		
-				protected int peekaboo() {
-					if (callCheck())
-						return -1;
-					return NUMBERS[total];
-				}
-			
-					public int countOut() {
-						if (callCheck())
-							return -1;
-						return NUMBERS[total--];
-					}
+	} // zle
 
+	public boolean isFull() {
+				return total == 11;
+			}  // zle
+		
+	protected int peekaboo() { // zle
+		if (callCheck()) // zle
+			return -1; // zle
+		return NUMBERS[total]; // zle
+	} // zle
+			
+	public int countOut() { // zle
+		if (callCheck()) // zle
+			return -1; // zle
+		return NUMBERS[total--]; // zle
+	} // zle
 }
