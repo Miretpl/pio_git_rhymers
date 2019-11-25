@@ -28,3 +28,8 @@ public class DefaultRhymersFactory implements Rhymersfactory {
     }
 
 }
+/*
+    Intellij
+    alt + <- = powoduje przejście do zakładki otwartej po lewej stronie
+    alt + -> = powoduje przejście do zakładki otwartej po prawej stronie
+*/
