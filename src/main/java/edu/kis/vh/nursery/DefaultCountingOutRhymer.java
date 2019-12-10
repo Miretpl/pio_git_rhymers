@@ -19,7 +19,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == EMPTY;
+        return total == CAPACITY-1;
     }
 
     protected int peek() {
