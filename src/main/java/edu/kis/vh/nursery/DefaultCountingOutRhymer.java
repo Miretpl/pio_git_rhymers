@@ -13,14 +13,12 @@ public class DefaultCountingOutRhymer {
         return total;
     }
 
-    private int total = -1;
- 
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    boolean check() {
+    boolean callCheck() {
         return total == EMPTY;
     }
 
@@ -28,14 +26,14 @@ public class DefaultCountingOutRhymer {
         return total == CAPACITY-1;
     }
 
-    int peek() {
-        if (check())
+    int peekaboo() {
+        if (callCheck())
             return DEFAULT;
         return numbers[total];
     }
 
     public int countOut() {
-        if (check())
+        if (callCheck())
             return DEFAULT;
         return numbers[total--];
     }

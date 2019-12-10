@@ -10,7 +10,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     @Override
     public void countIn(int in) {
-        if (!check() && in > peek())
+        if (!callCheck() && in > peekaboo())
             totalRejected++;
         else
             super.countIn(in);
