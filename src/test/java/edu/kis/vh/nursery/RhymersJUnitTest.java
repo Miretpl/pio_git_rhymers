@@ -13,6 +13,11 @@ public class RhymersJUnitTest {
 		HanoiRhymer rhymer = new HanoiRhymer();
 
 		Assert.assertEquals(0, rhymer.reportRejected());
+
+		rhymer.countIn(TEST_VALUE);
+		rhymer.countIn(TEST_VALUE + 1);
+
+		Assert.assertEquals(1, rhymer.reportRejected());
 	}
 
 	@Test
