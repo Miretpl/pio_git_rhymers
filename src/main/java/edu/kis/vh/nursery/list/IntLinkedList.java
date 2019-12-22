@@ -1,16 +1,7 @@
 package edu.kis.vh.nursery.list;
 
-class Node {
 
-	final int value;
-	Node prev, next;
-
-	Node(int i) {
-		value = i;
-	}
-
-}
-
+// TODO: class is not used. Consider deleting it.
 public class IntLinkedList {
 
 	private static final int IF_EMPTY = -1;
@@ -48,6 +39,17 @@ public class IntLinkedList {
 		int ret = last.value;
 		last = last.prev;
 		return ret;
+	}
+
+}
+
+class Node {
+
+	final int value;
+	Node prev, next;
+
+	Node(int i) {
+		value = i;
 	}
 
 }
