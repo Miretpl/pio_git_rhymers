@@ -76,7 +76,7 @@ public class RhymersJUnitTest {
 			rhymer.countIn(TEST_VALUE);
 		}
 
-		Assert.assertTrue(rhymer.isFull());
+		Assert.assertFalse(rhymer.isFull());
 	}
 
 	@Test

@@ -5,6 +5,7 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
 	private static final int IF_EMPTY = -1;
+	private int total = 0;
 	private Node last;
 
 	public void push(int i) {
@@ -14,10 +15,18 @@ public class IntLinkedList {
 			last.setNext(new Node(i));
 			last.getNext().setPrev(last);
 			last = last.getNext();
+			total++;
 		}
 	}
 
-	private boolean isEmpty() {
+	public int getTotal() {
+		if (isEmpty())
+			return IF_EMPTY;
+		else
+			return total;
+	}
+
+	public boolean isEmpty() {
 		return last == null;
 	}
 
@@ -36,6 +45,7 @@ public class IntLinkedList {
 			return IF_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
+		total--;
 		return ret;
 	}
 
