@@ -1,17 +1,37 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+/**
+ *	Class HanoiRhymer. Extends DefaultCountingOutRhymer class.
+ *
+ */
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-int totalRejected = 0;
+    /**
+     *	Quantity of rejected numbers.
+     */
+    private int totalRejected = 0;
 
-	public int reportRejected() {
-		return totalRejected;
-	}
+    /**
+     *	Constructor HanoiRhymer. Not declared in class.
+     */
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
-	}
+    /**
+     *	Return value of totalRejected field.
+     * @return Quantity of rejected numbers.
+     */
+    int reportRejected() {
+        return totalRejected;
+    }
+
+    /**
+     * Adds given number to array. Increase totalRejected if array is not empty and last added number is greater or equal than given one. Method is Overrided.
+     * @param in Number to add.
+     */
+    @Override
+    public void countIn(int in) {
+        if (!callCheck() && in > peekaboo())
+            totalRejected++;
+        else
+            super.countIn(in);
+    }
 }
