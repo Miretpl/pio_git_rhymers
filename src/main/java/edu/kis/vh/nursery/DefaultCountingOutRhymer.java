@@ -4,7 +4,7 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList stack = new IntLinkedList();
+    private IntDataStack stack = new IntLinkedList();
 
     public DefaultCountingOutRhymer(IntLinkedList stack) {
         this.stack = stack;
@@ -36,3 +36,8 @@ public class DefaultCountingOutRhymer {
         return stack.pop();
     }
 }
+
+/* 2.2
+Pytanie 1
+    Klasa DefalutContingOutRyhmer nie może zlokalizować metod obiektu stack. Jest to spowodowane brakiej deklaracji ów metod w interfejsie IntDataStack.
+ */
