@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-class IntArrayStack {
+class IntArrayStack implements IntDataStack {
 
     private static final int EMPTY = -1;
     private static final int DEFAULT = -1;

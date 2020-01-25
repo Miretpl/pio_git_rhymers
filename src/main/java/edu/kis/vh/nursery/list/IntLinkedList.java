@@ -1,8 +1,9 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.IntDataStack;
 
 // TODO: class is not used. Consider deleting it.
-public class IntLinkedList {
+public class IntLinkedList implements IntDataStack {
 
 	private static final int IF_EMPTY = -1;
 	private int total = 0;
