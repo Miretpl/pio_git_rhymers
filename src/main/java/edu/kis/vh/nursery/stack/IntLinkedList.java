@@ -6,7 +6,9 @@ import edu.kis.vh.nursery.IntDataStack;
 public class IntLinkedList implements IntDataStack {
 
 	private static final int IF_EMPTY = -1;
-	private int total = 0;
+	private static final int DEFAULT = 0;
+	private int total = DEFAULT;
+
 	private Node last;
 
 	public void push(int i) {
@@ -27,7 +29,7 @@ public class IntLinkedList implements IntDataStack {
 			return total;
 	}
 
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		return last == null;
 	}
 

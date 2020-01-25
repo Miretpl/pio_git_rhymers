@@ -4,12 +4,13 @@ import edu.kis.vh.nursery.IntDataStack;
 
 class IntArrayStack implements IntDataStack {
 
-    private static final int EMPTY = -1;
-    private static final int DEFAULT = -1;
+    private static final int IF_EMPTY = -1;
+    private static final int DEFAULT = 0;
+    private int total = IF_EMPTY;
+
     private static final int CAPACITY = 12;
 
     private final int[] numbers = new int[CAPACITY];
-    private int total = EMPTY;
 
     int getTotal() {
         return total;
@@ -20,11 +21,11 @@ class IntArrayStack implements IntDataStack {
             numbers[++total] = in;
     }
 
-    boolean callCheck() {
-        return total == EMPTY;
+    private boolean callCheck() {
+        return total == IF_EMPTY;
     }
 
-    boolean isFull() {
+    private boolean isFull() {
         return total == CAPACITY-1;
     }
 
@@ -40,3 +41,10 @@ class IntArrayStack implements IntDataStack {
         return numbers[total--];
     }
 }
+/* zad 2.2
+Pytanie 2
+    Nie
+
+Pytanie 3
+    IntDataStack
+ */
