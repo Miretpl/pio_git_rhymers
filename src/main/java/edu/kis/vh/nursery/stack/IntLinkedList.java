@@ -11,7 +11,7 @@ public class IntLinkedList implements IntDataStack {
 
 	private Node last;
 
-	public void push(int i) {
+	public void countIn(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -23,13 +23,13 @@ public class IntLinkedList implements IntDataStack {
 	}
 
 	public int getTotal() {
-		if (isEmpty())
+		if (callCheck())
 			return IF_EMPTY;
 		else
 			return total;
 	}
 
-	private boolean isEmpty() {
+	public boolean callCheck() {
 		return last == null;
 	}
 
@@ -37,14 +37,14 @@ public class IntLinkedList implements IntDataStack {
 		return false;
 	}
 
-	public int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return IF_EMPTY;
 		return last.getValue();
 	}
 
-	public int pop() {
-		if (isEmpty())
+	public int countOut() {
+		if (callCheck())
 			return IF_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();

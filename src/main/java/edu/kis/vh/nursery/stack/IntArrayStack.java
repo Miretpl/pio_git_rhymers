@@ -12,39 +12,40 @@ class IntArrayStack implements IntDataStack {
 
     private final int[] numbers = new int[CAPACITY];
 
-    int getTotal() {
+    public int getTotal() {
         return total;
     }
 
-    void countIn(int in) {
+    public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    private boolean callCheck() {
+    public boolean callCheck() {
         return total == IF_EMPTY;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return total == CAPACITY-1;
     }
 
-    int peekaboo() {
+    public int peekaboo() {
         if (callCheck())
             return DEFAULT;
         return numbers[total];
     }
 
-    int countOut() {
+    public int countOut() {
         if (callCheck())
             return DEFAULT;
         return numbers[total--];
     }
 }
+
 /* zad 2.2
 Pytanie 2
     Nie
 
 Pytanie 3
     IntDataStack
- */
+*/
