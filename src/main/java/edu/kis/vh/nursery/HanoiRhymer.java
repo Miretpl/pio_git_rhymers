@@ -5,15 +5,20 @@ package edu.kis.vh.nursery;
  *
  */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
-
     /**
      *	Quantity of rejected numbers.
      */
     private int totalRejected = 0;
 
     /**
-     *	Constructor HanoiRhymer. Not declared in class.
+     *	Constructor HanoiRhymer with stack.
      */
+    public HanoiRhymer(IntDataStack stack) { super(stack); }
+
+    /**
+     *	Deafult constructor HanoiRhymer.
+     */
+    public HanoiRhymer() { }
 
     /**
      *	Return value of totalRejected field.
