@@ -6,13 +6,13 @@ public class DefaultCountingOutRhymer {
 
     private IntDataStack stack = new IntLinkedList();
 
-    public DefaultCountingOutRhymer(IntDataStack stack) {
+    DefaultCountingOutRhymer(IntDataStack stack) {
         this.stack = stack;
     }
 
     public DefaultCountingOutRhymer() { }
 
-    public int getTotal() {
+    int getTotal() {
         return stack.getTotal();
     }
 
@@ -20,15 +20,15 @@ public class DefaultCountingOutRhymer {
         stack.countIn(in);
     }
 
-    public boolean callCheck() {
+    boolean callCheck() {
         return stack.callCheck();
     }
 
-    public boolean isFull() {
+    boolean isFull() {
         return stack.isFull();
     }
 
-    public int peekaboo() {
+    int peekaboo() {
         return stack.peekaboo();
     }
 
@@ -36,9 +36,3 @@ public class DefaultCountingOutRhymer {
         return stack.countOut();
     }
 }
-
-/* 2.2
-Pytanie 1
-    Klasa DefalutContingOutRyhmer nie może zlokalizować metod obiektu stack. Jest to spowodowane brakiej deklaracji ów metod w interfejsie IntDataStack.
-    Do poprawnego działania należy zdefiniować odpowiednie metody w interfejsie i zmienić nazwy metod w klasie IntLinkedList lub IntArrayStack.
- */

@@ -41,11 +41,3 @@ class IntArrayStack implements IntDataStack {
         return numbers[total--];
     }
 }
-
-/* zad 2.2
-Pytanie 2
-    Nie
-
-Pytanie 3
-    IntDataStack
-*/
